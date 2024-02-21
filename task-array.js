@@ -15,13 +15,15 @@ for (let i = 0; i < length; i = i + 1) {
 // a) Function which will print to console a whole array
 const printArray = (numbers) => {
   // Your code:
- 
+  console.log(numbers);
 };
+console.log("printArray");
+printArray(numbers);
 
 // b) Function which will print to console the length of array
 const printLength = (numbers) => {
   // Your code:
- 
+  
 };
 
 // c) Function which will print to console the first element of array
