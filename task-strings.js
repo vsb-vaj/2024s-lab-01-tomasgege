@@ -8,8 +8,10 @@
 
 // Your code:
 const parametrize = (input) => {
-
+    return input.toLowerCase().replace(/ /g, '-');
 };
+console.log("parametrize");
+console.log(parametrize('Javascript is the best'));
 
 // 2 =================================
 // Write function that takes object and return sentence
@@ -19,8 +21,15 @@ const parametrize = (input) => {
 
 // Your code:
 const giveSentenceForPerson = (obj) => {
-
+    let name = obj.name;
+    let position = obj.position;
+    let age = obj.age;
+    let location = obj.location;
+    
+    console.log(`Hello ${name} from ${location}! It is nice to meet you! You look awesome for your ${age}, young ${position}!`);
 };
+console.log("giveSentenceForPerson");
+giveSentenceForPerson({name: "Obi-wan", position: "Jedi", age: 40, location: "Starwars universe"});
 
 // 3 =================================
 // Write function that takes string and replace all `a`, `e`, `i`, `o` with *
@@ -29,5 +38,16 @@ const giveSentenceForPerson = (obj) => {
 
 // Your code:
 const replace = (input) => {
-
+    const vowels = ['a', 'e', 'i', 'o'];
+    let res = '';
+    for(let i = 0; i < input.length; i++){
+        if(vowels.includes(input[i])){
+            res += '*';
+        }else{
+            res += input[i];
+        }
+    }
+    console.log(res);
 };
+console.log("replace");
+replace("Hello Javascript");
